@@ -19,7 +19,7 @@
 0x008AFCE0 : 0x0003 : 56 8B 74                          : C2 14 00 
 
 // Disable the keychip time bomb
-0x0049C8B0 : 0x0003 : 51 56 8B 74 24 0C                 : B8 01 00 00 00 C3 
+0x0049C8B0 : 0x0006 : 51 56 8B 74 24 0C                 : B8 01 00 00 00 C3 
 
 // *But of course we have a valid keychip*, return true
 0x006FC420 : 0x0003 : A0 1A B9                          : B0 01 C3 
