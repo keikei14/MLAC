@@ -1,6 +1,6 @@
 #include "Injection/DllInjector.h"
 
-const char* MLAC_VERSION = "1.00.00";
+const char* MLAC_VERSION = "1.01.00";
 
 const std::string DIVA_PROCESS_NAME = "diva.exe";
 const std::string DIVA_HOOK_DLL_NAME = "divahook.dll";
@@ -54,7 +54,8 @@ void PrintProgramInfo()
 
 	printf("// Mostest Legit Arcade Controller (MLAC)			\n");
 	printf("//													\n");
-	printf("// v.%s                            -by samyuu       \n", MLAC_VERSION);
+	printf("// v.%s - by samyuu and rakisaionji \n", MLAC_VERSION);
+	printf("// still inferior to R39C but works for plebs \n");
 	printf("// -------------------------------------------------\n");
 }
 

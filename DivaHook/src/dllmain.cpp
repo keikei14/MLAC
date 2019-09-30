@@ -10,11 +10,11 @@
 #include "Components/EmulatorComponent.h"
 #include "Components/Input/InputEmulator.h"
 #include "Components/Input/TouchPanelEmulator.h"
-//#include "Components/SysTimer.h"
+#include "Components/SysTimer.h"
 //#include "Components/PlayerDataManager.h"
 //#include "Components/FrameRateManager.h"
 #include "Components/CameraController.h"
-//#include "Components/FastLoader.h"
+#include "Components/FastLoader.h"
 #include "Components/DebugComponent.h"
 #include "Utilities/Stopwatch.h"
 #include "FileSystem/ConfigFile.h"
@@ -94,11 +94,11 @@ namespace DivaHook
 		{
 			new InputEmulator(),
 			new TouchPanelEmulator(),
-			//new SysTimer(),
+			new SysTimer(),
 			//new PlayerDataManager(),
 			//new FrameRateManager(),
 			new CameraController(),
-			//new FastLoader(),
+			new FastLoader(),
 			new DebugComponent(),
 		};
 

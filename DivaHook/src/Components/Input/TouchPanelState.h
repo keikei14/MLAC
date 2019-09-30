@@ -5,7 +5,7 @@ namespace DivaHook::Components
 {
 	struct TouchPanelState
 	{
-		int Padding00[0x1A];
+		int Padding00[0x18];
 		int ConnectionState;
 		int Padding01[0x06];
 		float XPosition;

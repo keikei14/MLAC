@@ -1,0 +1,52 @@
+// patch.txt for Project DIVA Arcade
+// Version 1.01.00
+// 2010-04-27T 11:51:31+09:00
+# file:			patch.txt
+# author:		rakisaionji
+# version:		1.00.00
+# date:			2019/07/25
+# image_base:	0x00400C00
+
+// Address : Length : Original bytes                    : Patched bytes
+
+// Use GLUT_CURSOR_RIGHT_ARROW instead of GLUT_CURSOR_NONE
+0x005DB6C4 : 0x0001 : 65                                : 00 
+
+// Skip amMaster checks
+0x006FAA10 : 0x0003 : 83 39 07                          : B0 01 C3 
+
+// Skip pcpaOpenClient loop
+0x008AFCE0 : 0x0003 : 56 8B 74                          : C2 14 00 
+
+// Disable the keychip time bomb
+0x0049C8B0 : 0x0003 : 51 56 8B 74 24 0C                 : B8 01 00 00 00 C3 
+
+// *But of course we have a valid keychip*, return true
+0x006FC420 : 0x0003 : A0 1A B9                          : B0 01 C3 
+
+// Just completely ignore all SYSTEM_STARTUP errors 
+0x005DEC50 : 0x0001 : E8                                : C3 
+
+// Skip parts of the network check state
+0x00705949 : 0x0005 : 53 E8 81 6B FF                    : E9 13 01 00 00 
+
+// Ignore SYSTEM_STARTUP Location Server checks
+0x007052A1 : 0x0002 : 75 0F                             : 90 90 
+
+// Set the initial wait timer value to 0
+0x00706D2E : 0x0002 : 10 0E                             : 00 00 
+0x00706D50 : 0x0002 : 20 1C                             : 00 00 
+0x00706D67 : 0x0002 : A0 8C                             : 00 00 
+
+// Always exit TASK_MODE_APP_ERROR on the first frame
+0x005DFD0B : 0x0002 : 74 16                             : 90 90 
+0x005DFD18 : 0x0002 : 74 09                             : 90 90 
+
+// Jump past the PollInput function so we can write our own input
+0x006FA640 : 0x0001 : 56                                : C3 
+
+// Always return true for the SelCredit enter SelPv check
+0x005A3D80 : 0x0003 : 53 56 6A                          : B0 01 C3
+
+// Return early before resetting to the default PlayerData so we don't need to keep updating the PlayerData struct
+0x00642800 : 0x0001 : 56                                : C3 

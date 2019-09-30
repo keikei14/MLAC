@@ -15,19 +15,19 @@
     <ProjectGuid>{69BCF67B-34D9-4424-A2A8-3A056E9D38A6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>DivaHook</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -94,6 +94,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Components\FastLoader.h" />
+    <ClInclude Include="src\Components\SysTimer.h" />
     <ClInclude Include="src\Input\Bindings\Ds4Binding.h" />
     <ClInclude Include="src\Input\DirectInput\Ds4\Ds4Button.h" />
     <ClInclude Include="src\Input\DirectInput\Ds4\Ds4State.h" />
@@ -139,6 +141,8 @@
     <ClInclude Include="src\FileSystem\TextFile.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Components\FastLoader.cpp" />
+    <ClCompile Include="src\Components\SysTimer.cpp" />
     <ClCompile Include="src\Input\Bindings\Ds4Binding.cpp" />
     <ClCompile Include="src\Input\DirectInput\Ds4\Ds4State.cpp" />
     <ClCompile Include="src\Input\DirectInput\Ds4\DualShock4.cpp" />

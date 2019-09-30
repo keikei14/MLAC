@@ -1,4 +1,5 @@
 #include "SysTimer.h"
+#include "../MainModule.h"
 #include "../Constants.h"
 
 namespace DivaHook::Components
@@ -11,24 +12,22 @@ namespace DivaHook::Components
 	{
 	}
 
-	const char* SysTimer::GetDisplayName()
+	const char *SysTimer::GetDisplayName()
 	{
 		return "sys_timer";
 	}
 
 	void SysTimer::Initialize()
 	{
-		selPvTime = GetSysTimePtr((void*)SEL_PV_TIME_ADDRESS);
+		DWORD oldProtect, bck;
+		VirtualProtect((BYTE *)0x006C150B, 3, PAGE_EXECUTE_READWRITE, &oldProtect);
+		*((BYTE *)0x006C150B + 0) = 0x90;
+		*((BYTE *)0x006C150B + 1) = 0x90;
+		*((BYTE *)0x006C150B + 2) = 0x90;
+		VirtualProtect((BYTE *)0x006C150B, 3, oldProtect, &bck);
 	}
 
 	void SysTimer::Update()
 	{
-		// account for the decrement that occures during this frame
-		*selPvTime = SEL_PV_FREEZE_TIME * SYS_TIME_FACTOR + 1;
-	}
-
-	int* SysTimer::GetSysTimePtr(void *address)
-	{
-		return (int*)address;
 	}
 }
