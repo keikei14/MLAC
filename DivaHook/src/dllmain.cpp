@@ -1,11 +1,12 @@
-#include <Windows.h>
-#include <Dbt.h>
+#include <windows.h>
+#include <dbt.h>
 #include <vector>
 #include "Constants.h"
 #include "MainModule.h"
 #include "Input/Mouse/Mouse.h"
 #include "Input/Keyboard/Keyboard.h"
 #include "Input/DirectInput/DirectInput.h"
+#include "Input/Xinput/Xinput.h"
 #include "Input/DirectInput/Ds4/DualShock4.h"
 #include "Components/EmulatorComponent.h"
 #include "Components/Input/InputEmulator.h"
@@ -208,6 +209,7 @@ namespace DivaHook
 		{
 			Input::Keyboard::GetInstance()->PollInput();
 			Input::Mouse::GetInstance()->PollInput();
+			Input::Xinput::GetInstance()->PollInput();
 
 			if (Input::DualShock4::GetInstance() != nullptr)
 			{

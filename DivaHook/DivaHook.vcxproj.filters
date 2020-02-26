@@ -150,6 +150,15 @@
     <ClInclude Include="src\Components\SysTimer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Input\Xinput\Xinput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Input\Xinput\XinputState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Input\Bindings\XinputBinding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Components\EmulatorComponent.cpp">
@@ -257,8 +266,14 @@
     <ClCompile Include="src\Components\SysTimer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="rom\keyconfig.txt" />
+    <ClCompile Include="src\Input\Bindings\XinputBinding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Input\Xinput\Xinput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Input\Xinput\XinputState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

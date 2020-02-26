@@ -328,3 +328,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/DivaHook/bin-int
+/MostestLegtiArcadeController/bin-int
+/Prepatch/bin-int

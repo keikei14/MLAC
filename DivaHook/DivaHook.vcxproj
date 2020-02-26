@@ -15,7 +15,7 @@
     <ProjectGuid>{69BCF67B-34D9-4424-A2A8-3A056E9D38A6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>DivaHook</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -97,6 +97,7 @@
     <ClInclude Include="src\Components\FastLoader.h" />
     <ClInclude Include="src\Components\SysTimer.h" />
     <ClInclude Include="src\Input\Bindings\Ds4Binding.h" />
+    <ClInclude Include="src\Input\Bindings\XinputBinding.h" />
     <ClInclude Include="src\Input\DirectInput\Ds4\Ds4Button.h" />
     <ClInclude Include="src\Input\DirectInput\Ds4\Ds4State.h" />
     <ClInclude Include="src\Input\DirectInput\Ds4\DualShock4.h" />
@@ -118,6 +119,8 @@
     <ClInclude Include="src\Input\KeyConfig\Config.h" />
     <ClInclude Include="src\Input\KeyConfig\KeyString.h" />
     <ClInclude Include="src\Input\KeyConfig\KeyStringHash.h" />
+    <ClInclude Include="src\Input\Xinput\Xinput.h" />
+    <ClInclude Include="src\Input\Xinput\XinputState.h" />
     <ClInclude Include="src\MainModule.h" />
     <ClInclude Include="src\Input\Bindings\Binding.h" />
     <ClInclude Include="src\Input\Bindings\KeyboardBinding.h" />
@@ -144,6 +147,7 @@
     <ClCompile Include="src\Components\FastLoader.cpp" />
     <ClCompile Include="src\Components\SysTimer.cpp" />
     <ClCompile Include="src\Input\Bindings\Ds4Binding.cpp" />
+    <ClCompile Include="src\Input\Bindings\XinputBinding.cpp" />
     <ClCompile Include="src\Input\DirectInput\Ds4\Ds4State.cpp" />
     <ClCompile Include="src\Input\DirectInput\Ds4\DualShock4.cpp" />
     <ClCompile Include="src\Input\DirectInput\Controller.cpp" />
@@ -159,6 +163,8 @@
     <ClCompile Include="src\Input\KeyConfig\Config.cpp" />
     <ClCompile Include="src\Input\KeyConfig\KeyString.cpp" />
     <ClCompile Include="src\Input\KeyConfig\KeyStringHash.cpp" />
+    <ClCompile Include="src\Input\Xinput\Xinput.cpp" />
+    <ClCompile Include="src\Input\Xinput\XinputState.cpp" />
     <ClCompile Include="src\MainModule.cpp" />
     <ClCompile Include="src\Input\Bindings\Binding.cpp" />
     <ClCompile Include="src\Input\Bindings\KeyboardBinding.cpp" />
@@ -176,9 +182,6 @@
     <ClCompile Include="src\FileSystem\TextFile.cpp" />
     <ClCompile Include="src\Utilities\Vec2.cpp" />
     <ClCompile Include="src\Utilities\Vec3.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="rom\keyconfig.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
